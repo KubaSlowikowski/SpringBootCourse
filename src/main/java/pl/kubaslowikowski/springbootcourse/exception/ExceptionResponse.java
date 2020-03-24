@@ -1,4 +1,4 @@
-package pl.kubaslowikowski.springbootcourse;
+package pl.kubaslowikowski.springbootcourse.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

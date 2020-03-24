@@ -1,10 +1,11 @@
-package pl.kubaslowikowski.springbootcourse;
+package pl.kubaslowikowski.springbootcourse.model;
 
 import lombok.Data;
 
 @Data
-public class User {
-
+public class UserDTO {
+//w tym przypadku DTO dodajemy, poniewaz transformujemy plik JSON na Java
+    // latwo jest wtedy odrozniac
     private String firstName;
     private String lastName;
     private String email;
