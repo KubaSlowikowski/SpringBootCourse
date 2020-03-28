@@ -1,18 +1,15 @@
 package pl.kubaslowikowski.springbootcourse.persistence.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true) //metody hashCode i equals będą brane z klasy nadrzędnej (podpowiedź automatyczna z intelliJ)
 @Data
 @Entity
 @Table(name = "courses")
-public class Course { //klasa referuje bezpośrednio do bazy danych, reprezentuje dane po stronie tabelki
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE) //jest generowany przez tabelkę
-    @Column(name = "id")
-    private Long id;
+public class Course extends BaseEntity { //klasa referuje bezpośrednio do bazy danych, reprezentuje dane po stronie tabelki
 
     @Column(name = "name")
     private String name;
