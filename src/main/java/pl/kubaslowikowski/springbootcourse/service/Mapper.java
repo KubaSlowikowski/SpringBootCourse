@@ -5,7 +5,7 @@ import pl.kubaslowikowski.springbootcourse.model.UserDTO;
 import pl.kubaslowikowski.springbootcourse.persistence.model.Course;
 import pl.kubaslowikowski.springbootcourse.persistence.model.User;
 
-public class Mapper {
+public class Mapper { //klasa odpowiedzialna za mapowanie klas
 
     public static CourseDTO courseToDTO(Course course) {
         CourseDTO courseDTO = new CourseDTO();

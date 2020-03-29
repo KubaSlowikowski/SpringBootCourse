@@ -11,7 +11,7 @@ import java.util.Date;
 public class BaseEntity implements Serializable { //jest to główna klasa zawierająca podstawowe pola w tabelkach
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 29 6:42
     @Column(name = "id")
     private Long id;
 

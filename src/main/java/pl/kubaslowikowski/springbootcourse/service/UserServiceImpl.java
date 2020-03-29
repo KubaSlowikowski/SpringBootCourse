@@ -6,11 +6,14 @@ import pl.kubaslowikowski.springbootcourse.model.UserDTO;
 import pl.kubaslowikowski.springbootcourse.persistence.model.User;
 import pl.kubaslowikowski.springbootcourse.persistence.repository.UserRepo;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class UserServiceImpl extends BaseServiceImpl<User, Long, UserRepo> implements UserService {
 
     @Autowired
-    private UserRepo userRepo;
+    UserRepo userRepo;
 
     @Override
     public UserRepo getRepository() {
@@ -19,13 +22,13 @@ public class UserServiceImpl extends BaseServiceImpl<User, Long, UserRepo> imple
 
     @Override
     public UserDTO createUser(UserDTO userDTO) {
-        User u = save(Mapper.dtoToUser(userDTO));
-        return Mapper.userToDTO(u);
+        User user = save(Mapper.dtoToUser(userDTO));
+        return Mapper.userToDTO(user);
     }
 
     @Override
     public UserDTO editUser(UserDTO userDTO) {
-        User u = save(Mapper.dtoToUser(userDTO));
-        return Mapper.userToDTO(u);
+        User user = save(Mapper.dtoToUser(userDTO));
+        return null;
     }
 }

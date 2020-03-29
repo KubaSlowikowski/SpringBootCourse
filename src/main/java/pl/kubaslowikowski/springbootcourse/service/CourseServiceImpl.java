@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class CourseServiceImpl extends BaseServiceImpl<Course, Long, CourseRepo> implements CourseService {
 
-    @Autowired
+    @Autowired // 26 12:25 //dzięki tej adnotacji nie musimy nigdzie inicjalizować courseRepo i mieć do niej dostęp
     private CourseRepo courseRepo;
 
     @Override

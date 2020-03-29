@@ -6,5 +6,4 @@ import pl.kubaslowikowski.springbootcourse.persistence.model.Course;
 
 public interface CourseRepo extends BaseRepository<Course, Long> {
 //interfejs odpowiedzialny za operacje, ktore mozemy wykonywac na danych
-// JpaRepository - dużo operacji na bazach danych
 }

@@ -1,5 +1,6 @@
 package pl.kubaslowikowski.springbootcourse.service;
 
+import org.springframework.stereotype.Service;
 import pl.kubaslowikowski.springbootcourse.persistence.model.BaseEntity;
 import pl.kubaslowikowski.springbootcourse.persistence.repository.BaseRepository;
 
@@ -7,6 +8,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+@Service
 public abstract class BaseServiceImpl<T extends BaseEntity, K extends Serializable, R extends BaseRepository<T, K>> implements BaseService<T, K, R> {
     //nie można wywołać tej klasy, można ją przeciążyć
 
@@ -21,7 +23,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, K extends Serializab
     @Override
     public T delete(K id) {
         T entity = getOne(id);
-        entity.setActive(false); // nie usuwamy tylko ustawiamy pole "active" na false
+        entity.setActive(false); // nie usuwamy elementu tylko ustawiamy pole "active" na false
         return save(entity);
     }
 
